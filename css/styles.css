@@ -225,7 +225,7 @@ section {
   border-radius: 4px;
   font-family: inherit;
   background-color: var(--accent-color);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   align-items: center;
@@ -275,6 +275,7 @@ section {
 }
 
 .modal {
+  padding: 72px 24px 24px;
   position: absolute;
   width: 408px;
   height: 576px;
@@ -291,7 +292,6 @@ section {
 .icon-close {
   height: 24px;
   padding: 0;
-  height: 24px;
   border-radius: 50%;
   position: absolute;
   right: 0%;
@@ -300,7 +300,15 @@ section {
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+.icon-close:hover {
+ fill: #FFFFFF;
+ background-color: #404BBF;
+}
 
+.icon-close:focus {
+ fill: #FFFFFF;
+ background-color: #404BBF;
+}
 
 .close {
   position: absolute;
@@ -322,13 +330,11 @@ section {
 }
 
 .form {
-  padding-left: 24px;
-  padding-right: 24px;
+
 }
 
 
 .form-title {
-  margin-top: 72px;
   margin-bottom: 14px;
   text-align: center;
 font-weight: 500;
@@ -359,6 +365,7 @@ color: rgba(117, 117, 117, 0.5);
   border-radius: 4px;
   height: 40px;
   background-color: #FCFCFC;
+  outline: transparent;
   
 }
 
@@ -380,7 +387,9 @@ color: #8E8F99;
   padding-left: 16px;
   padding-top: 8px;
   position: relative;
+  outline: transparent;
 }
+
 
 .icon-field {
   position: absolute;
@@ -410,14 +419,12 @@ transition-property: color;
 }
 
 .form-input:focus {
-  border: 1px solid #4D5AE5;
+  border-color: #4D5AE5;
 }
 
 .button-form {
 justify-content: center;
-position: absolute;
-width: 169px;
-height: 56px;
+min-width: 169px;
 background: var(--accent-color);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
@@ -429,8 +436,9 @@ align-items: center;
 text-align: center;
 letter-spacing: 0.04em;
 color: #FFFFFF;
-padding: 0;
-margin-left: 95px;
+padding: 16px 32px;
+margin-left: auto;
+margin-right: auto;
 transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -780,13 +788,11 @@ color: #757575;
 
 .subscribe {
   width: 453px;
-  height: 80px;
-  display: flex;
   margin-left: 80px;
   position: relative;
 }
 
-.form-futer label {
+.form-futer-title {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
@@ -797,10 +803,15 @@ letter-spacing: 0.02em;
 color: #FFFFFF;
 }
 
+.form-futer {
+  display: flex;
+}
+
 .form-futer-input {
   display: flex;
   width: 262px;
-  height: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -818,8 +829,6 @@ color: #FFFFFF;
 }
 
 .button-form-futer {
-right: -100%;
-top: -50%;
 padding-left: 24px;
 position: relative;
 margin-left: 24px;
